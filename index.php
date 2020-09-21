@@ -11,6 +11,7 @@ link: https://www.youtube.com/watch?v=0YLJ0uO6n8I&list=PL0eyrZgxdwhwBToawjm9faF1
             <h5>Pages</h5><!--TODO: Going to have to redo this for future assignments--> 
             <ul>
                 <!-- <li><a href="book_checkout.php">Borrow a Book</a></li> -->
+                <li><a href="checkout.php">Checkout</a></li>
                 <li><a href="leave_review.php">Leave a Review</a></li>
             </ul>
             <div class="main right-content">
