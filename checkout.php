@@ -31,8 +31,13 @@ link: https://www.youtube.com/watch?v=0YLJ0uO6n8I&list=PL0eyrZgxdwhwBToawjm9faF1
             2b: (Inprogress) If there are between 5 - 7 books, add 20% and the previous 10% for books 2-4
             3b: (Inprogress) If there are more than 8 books, add 30%, and add 20% for 5-7 and 10% for 2-4
         3: Complete checkout
+            3a: (Inprogress) Adding all the books in cart before discount
+            3b: (Inprogress) Showing new price with all discounts
+            3c: (Inprogress) Asking for purchaser's name
+        4: Output to text file:
+            4a: 
  -->
- 
+
 <html>
     <head>
         <link rel="stylesheet" href="style.css">
