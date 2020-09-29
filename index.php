@@ -1,6 +1,18 @@
-<!-- Part of this code was taken from previous class ICS311 and from online
+<!-- 
+Part of this code was taken from previous class ICS311 and from online
 Dani Krossing's youtube channel to display the information 
-link: https://www.youtube.com/watch?v=0YLJ0uO6n8I&list=PL0eyrZgxdwhwBToawjm9faF1ixePexft-&index=37 -->
+link: https://www.youtube.com/watch?v=0YLJ0uO6n8I&list=PL0eyrZgxdwhwBToawjm9faF1ixePexft-&index=37 
+-->
+
+<!-- 
+    Things I need to do for assignment 2:
+    
+ -->
+
+<!-- 
+    Things I need to complete for assignment 4:
+        
+ -->
 <html>
     <head>
         <link rel="stylesheet" href="style.css">

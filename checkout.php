@@ -8,8 +8,31 @@ link: https://www.youtube.com/watch?v=0YLJ0uO6n8I&list=PL0eyrZgxdwhwBToawjm9faF1
     //$book_name = "Lord of the Rings: Fellowship of the Ring";
     global $book_rent;
     global $book_buy;
-?>
 
+    echo $book_id;
+    switch($book_id){
+        case 1:
+            echo "case 1";
+            $book_name = "Lord of the Rings: Fellowship of the Ring";
+            break;
+        default: 
+            echo "Error - Book not in list";
+    }
+
+?>
+<!-- 
+    Things I need to do in assignment 3:
+        1: I need to add a functionaility to add books to some type of cart, than have it calculate the total for buying the books
+            1a: (Inprogress) Adding more books
+            1b: (Inprogress) Being able to add books to cart for checkout
+            1c: (Inprogress) Adding all of the prices of the selected books
+        2: Add discounts depending on the amount of books he is buying
+            2a: (Inprogress) If there are between 2 - 4 books, add 10%
+            2b: (Inprogress) If there are between 5 - 7 books, add 20% and the previous 10% for books 2-4
+            3b: (Inprogress) If there are more than 8 books, add 30%, and add 20% for 5-7 and 10% for 2-4
+        3: Complete checkout
+ -->
+ 
 <html>
     <head>
         <link rel="stylesheet" href="style.css">
@@ -24,17 +47,6 @@ link: https://www.youtube.com/watch?v=0YLJ0uO6n8I&list=PL0eyrZgxdwhwBToawjm9faF1
                 <li><a href="leave_review.php">Leave a Review</a></li>
             </ul>
             
-<?php
-    echo $book_id;
-    switch($book_id){
-        case 1:
-            echo "case 1";
-            $book_name = "Lord of the Rings: Fellowship of the Ring";
-            break;
-        default: 
-            echo "Error - Book not in list";
-    }
-?>
 
 
 
@@ -51,12 +63,15 @@ link: https://www.youtube.com/watch?v=0YLJ0uO6n8I&list=PL0eyrZgxdwhwBToawjm9faF1
                         <option value="8"><?php $book_id = 8?>Tom Clancey: The Hunt for the Red October</option>
                     </select> 
                     <br><br>
-                <!-- <input type="submit" value="Select Book"> -->
+                <input type="submit" value="Select Book">
             </form>
 
-            <script>
-                // function 
-            </script>
+<?php 
+    $animals = array('--Select Animal--', 'Cat', 'Dog', 'Cow');
+    $selected_key = $_POST['animal'];
+    $selected_val = $animals[$_POST['animal']];
+?>
+
 
 
             <div class="main right-content">
