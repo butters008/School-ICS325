@@ -20,3 +20,16 @@ body{
 th, td {
     padding: 15px;
 }
+
+#mainHeader{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#navigation{
+    background-color: lightgray;
+    float: left;
+    width: 100px;
+    height: 175px;
+}
