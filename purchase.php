@@ -1,6 +1,3 @@
-<!-- Part of this code was taken from previous class ICS311 and from online
-Dani Krossing's youtube channel to display the information 
-link: https://www.youtube.com/watch?v=0YLJ0uO6n8I&list=PL0eyrZgxdwhwBToawjm9faF1ixePexft-&index=37 -->
 <!-- 
     Things I need to do in assignment 3:
         1: I need to add a functionaility to add books to some type of cart, than have it calculate the total for buying the books
@@ -8,21 +5,19 @@ link: https://www.youtube.com/watch?v=0YLJ0uO6n8I&list=PL0eyrZgxdwhwBToawjm9faF1
             1b: (Done) Being able to add books to cart for checkout
             1c: (Done) Adding all of the prices of the selected books
         2: Add discounts depending on the amount of books he is buying
-            2a: (Inprogress) If there are between 2 - 4 books, add 10%
-            2b: (Inprogress) If there are between 5 - 7 books, add 20% and the previous 10% for books 2-4
-            3b: (Inprogress) If there are more than 8 books, add 30%, and add 20% for 5-7 and 10% for 2-4
+            2a: (Done) If there are between 2 - 4 books, add 10%
+            2b: (Done) If there are between 5 - 7 books, add 20% and the previous 10% for books 2-4
+            3b: (Done) If there are more than 8 books, add 30%, and add 20% for 5-7 and 10% for 2-4
         3: Complete checkout
-            3a: (future) Adding all the books in cart before discount
-            3b: (future) Showing new price with all discounts
-            3c: (future) Asking for purchaser's name
+            3a: (Done) Adding all the books in cart before discount
+            3b: (Done) Showing new price with all discounts
+            3c: (Done) Asking for purchaser's name
         4: Output to text file:
-            4a: (future) Have website create text file called purchases.txt
-            4b: (future) Have the text file include name, books, and total amount
+            4a: (Inprogress) Have website create text file called purchases.txt
+            4b: (Inprogress) Have the text file include name, books, and total amount
  -->
  <?php
     include "book.php";
-    $final_book_price;
-    //echo "{$book1_name}";
  ?>
  <style>
     #mainHeader{
@@ -33,7 +28,7 @@ link: https://www.youtube.com/watch?v=0YLJ0uO6n8I&list=PL0eyrZgxdwhwBToawjm9faF1
 
     #navigation{
         background-color: lightgray;
-        width: 100px;
+        width: 200px;
         height: 175px;
     }
 
@@ -218,6 +213,10 @@ link: https://www.youtube.com/watch?v=0YLJ0uO6n8I&list=PL0eyrZgxdwhwBToawjm9faF1
     var totalPrice = 0;
     var bookNames = [];
     var bookCount = 0;
+    var discount1 = 0;
+    var discount2 = 0;
+    var discount3 = 0;
+    var finalPrice = 0;
 
     document.getElementById("textBtn").onclick = function() {textFile()};
 
@@ -229,52 +228,63 @@ link: https://www.youtube.com/watch?v=0YLJ0uO6n8I&list=PL0eyrZgxdwhwBToawjm9faF1
             totalPrice += price;            
             bookNames.push(bookName1);
             bookCount++;
+            processDeal(bookCount);
         }
         if (document.getElementById("book2").checked == true){
             totalPrice += price;            
             bookNames.push(bookName2);
             bookCount++;
+            processDeal(bookCount);
         }
         if (document.getElementById("book3").checked == true){
             totalPrice += price;            
             bookNames.push(bookName3);
             bookCount++;
+            processDeal(bookCount);
         }
         if (document.getElementById("book4").checked == true){
             totalPrice += price;            
             bookNames.push(bookName4);
             bookCount++;
+            processDeal(bookCount);
         }
         if (document.getElementById("book5").checked == true){
             totalPrice += price;            
             bookNames.push(bookName5);
             bookCount++;
+            processDeal(bookCount);
         }
         if (document.getElementById("book6").checked == true){
             totalPrice += price;            
             bookNames.push(bookName6);
             bookCount++;
+            processDeal(bookCount);
         }
         if (document.getElementById("book7").checked == true){
             totalPrice += price;            
             bookNames.push(bookName7);
             bookCount++;
+            processDeal(bookCount);
         }
         if (document.getElementById("book8").checked == true){
             totalPrice += price;            
             bookNames.push(bookName8);
             bookCount++;
+            processDeal(bookCount);   
         }
         if (document.getElementById("book9").checked == true){
             totalPrice += price;            
             bookNames.push(bookName9);
             bookCount++;
+            processDeal(bookCount);
         }
         if (document.getElementById("book10").checked == true){
             totalPrice += price;            
             bookNames.push(bookName10);
             bookCount++;
+            processDeal(bookCount);
         }
+
 
         document.body.innerHTML += bookNames.toString();
         console.log(totalPrice);
@@ -282,6 +292,38 @@ link: https://www.youtube.com/watch?v=0YLJ0uO6n8I&list=PL0eyrZgxdwhwBToawjm9faF1
         console.log(userName);
         document.getElementById("totalAmt").innerHTML += totalPrice.toString();
         document.getElementById("showName").innerHTML += userName;
+        document.getElementById("dicountAmt1").innerHTML += discount1;
+        document.getElementById("dicountAmt2").innerHTML += discount2;
+        document.getElementById("dicountAmt3").innerHTML += discount3;
+
+        finalPrice = totalPrice - discount1 - discount2 - discount3;
+        document.getElementById("newAmt").innerHTML += finalPrice;
+
+        <?php 
+            $myfile = fopen("purchases.txt", "w") or die("Unable to open file!");
+            fwrite($myfile, "Keith Butterfield");
+            fclose($myfile);
+        ?>
+    }
+
+    function processDeal(bookCount){
+        if (bookCount >= 2 && bookCount <= 4){
+            var discount = .1;
+            discount1 = totalPrice * discount;
+            console.log("Inside process deal " + bookCount);
+            
+        }
+        else if (bookCount >= 5 && bookCount <= 7){
+            var discount = .2;
+            discount2 = totalPrice * discount;
+            console.log("Inside process deal " + bookCount);
+            
+        }
+        else if (bookCount >= 8){
+            var discount = .3;
+            discount3 = totalPrice * discount;
+            console.log("Inside process deal " + bookCount);   
+        }       
     }
 
 </script>

@@ -1,12 +1,110 @@
+/* Navigation ------------------------- */
+/* Navigation code for ul li was taken from W3Schools  https://www.w3schools.com/css/css_navbar_vertical.asp 
+and did navigation and active myself*/
+#navigation{
+    background-color: lightgray;
+    color: white;
+    float: left;
+    width: 200px;
+    max-height: 200px;
+    overflow: hidden;
+    background-color: #333;
+    display: block;
+    margin-right: 75px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    background-color: #f1f1f1;
+}
+  
+li a {
+    display: block;
+    color: #000;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+  
+/* Change the link color on hover */
+li a:hover {
+    background-color: rgb(90, 90, 90);
+    color: white;
+}
+
+.active {
+    background-color: rgb(53, 141, 1);
+}
+/*-----------------------------------*/
+/* Title and Log in ---------------- */
+#titleText{
+    position: absolute;
+    top: 30px;
+    left: 300px;
+    font-weight: bold;
+    color: white;
+    background-color: black;
+    opacity: 0.75;
+    padding: 25px;
+}
+/*-----------------------------------*/
+/*-Table Listing and Books-----------*/
+table{
+    margin-right: auto;
+    /* margin-left: 350px; */
+    /* margin-left: auto; */
+    border: solid;
+
+}
+
+thead {
+    color: white;
+    border-color: black;
+    background-color: black;
+}
+
+tfoot {
+    color: white;
+    background-color: black;
+}
+
+tbody{
+    border: solid;
+}
+
+th{
+    padding: 15px;
+    border: solid;
+    min-width: 150px;
+    max-height: 250px;
+}
+
+#mainHeader{
+    text-align: center;
+    /* margin-left: auto;
+    margin-right: auto; */
+}
+
+.bookPic{
+    width: 125px;
+    height: 150px;
+    /* height: ; */
+}
+/*-----------------------------------*/
+/*-Overall Main Body-----------------*/
 body{
-    background-color: aliceblue;
+    background-color: rgb(43, 43, 43);
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .main{
-    background-color: grey;
+    background-color: rgb(218, 218, 218);
     width: 75%;
     margin: auto;
     min-height: auto; 
+    padding: 25px;
 }
 
 .book-content {
@@ -16,20 +114,4 @@ body{
     display: inline-block;
     vertical-align: top;
 }
-
-th, td {
-    padding: 15px;
-}
-
-#mainHeader{
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-#navigation{
-    background-color: lightgray;
-    float: left;
-    width: 100px;
-    height: 175px;
-}
+/*-----------------------------------*/

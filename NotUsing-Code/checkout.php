@@ -1,7 +1,3 @@
-<!-- Part of this code was taken from previous class ICS311 and from online
-Dani Krossing's youtube channel to display the information 
-link: https://www.youtube.com/watch?v=0YLJ0uO6n8I&list=PL0eyrZgxdwhwBToawjm9faF1ixePexft-&index=37 -->
-
 <style>
     #mainHeader{
         text-align: center; 
