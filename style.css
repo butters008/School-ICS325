@@ -72,13 +72,15 @@ tfoot {
 
 tbody{
     border: solid;
+    color: white;
+    background-color: black;
 }
 
 th{
     padding: 15px;
     border: solid;
-    min-width: 150px;
-    max-height: 250px;
+    /* min-width: 150px;
+    max-height: 250px; */
 }
 
 #mainHeader{
@@ -88,14 +90,16 @@ th{
 }
 
 .bookPic{
-    width: 125px;
-    height: 150px;
+    /* width: 125px;
+    height: 150px; */
     /* height: ; */
 }
 /*-----------------------------------*/
 /*-Overall Main Body-----------------*/
 body{
-    background-color: rgb(43, 43, 43);
+    /* background-color: rgb(43, 43, 43); */
+
+    background-color: aqua;
     font-family: Arial, Helvetica, sans-serif;
 }
 
