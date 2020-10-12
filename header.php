@@ -1,5 +1,5 @@
 <?php
-    include "dbcred.php";
+    //include "dbcred.php";
 
     echo"<html>
     <head>
@@ -18,10 +18,11 @@
                 <!-- We are going to combine the rent and purchases into one page -->
                 <h5>Pages</h5>
                 <ul>
-                    <li><a href='index.php' class='active'>Home</a></li>
+                    <li><a href='index.php'>Home</a></li>
                     <li><a href='purchase.php'>Purchase a Book</a></li>
                     <li><a href='rent.php'>Rent a Book</a></li>
                     <li><a href='leave_review.php'>Leave a Review</a></li>
+                    <li><a href='array.php'>Array</a></li>
                 <ul>
                 
             </div><!-- End of Navigation -->";

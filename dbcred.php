@@ -1,12 +1,29 @@
 <?php
 // This was taken from my ICS311 class
+session_start();
+ 
+//  require_once('functions.php');
+//  require_once('database.php');
+//  require_once('query_functions.php');
+//  require_once('validation_functions.php');
+
+
+//localhost
 DEFINE('DB_SERVER', 'localhost');
 DEFINE('DB_NAME', 'ics325fa2005');
-DEFINE('DB_USER', 'ics325fa2005');
-DEFINE('DB_PASS', '2944');
+DEFINE('DB_USER', 'root');
+DEFINE('DB_PASS', '');
+
+// DEFINE('DB_SERVER', 'localhost');
+// DEFINE('DB_NAME', 'ics325fa2005');
+// DEFINE('DB_USER', 'ics325fa2005');
+// DEFINE('DB_PASS', '2944');
 
 function db_connect() {
+    // $connection = mysqli_connect('localhost', 'ics325fa2005', '2944', 'ics325fa2005');
+    // $connection = mysqli_connect('localhost', 'ics325fa2005', '','root');
     $connection = mysqli_connect(DB_SERVER, DB_USER, DB_PASS, DB_NAME);
+
     confirm_db_connect();
     return $connection;
 }
@@ -34,4 +51,6 @@ function confirm_result_set($result_set) {
         exit("The Database query failed.");
     }
 }
+
+$db = db_connect();
 ?>

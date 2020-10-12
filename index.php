@@ -1,7 +1,3 @@
-<!-- // Some of this code was taken from my prior class ICS311, but I modified the code to work for this process
-The code that I will be changing will be the dynaimic loading of the books from the linux server and have each book load
-dynamically with only one php file.  This will help me with my group project since we are making a reciepe book and I will 
-be able to store all info where I need it -->
 <?php 
     include "header.php"; 
     global $db;
@@ -19,42 +15,54 @@ be able to store all info where I need it -->
 
         </tr>
     </thead>
-    <?php echo "testing";?>
+
     <tbody>
-<?php 
-    echo "Beginning php - before sql call";
-    $sql = "SELECT * FROM books ORDER BY books.book_id ASC";
-    echo "after sql call";
-    // $sql = "SELECT books.author, books.name, books.bookPic, books.book_id FROM books ORDER BY books.book_id ASC";
-    $result = $db->query($sql);
-
-    echo "before IF";
-    if ($result->num_rows > 0) {
-        echo "inside if";
-        while($row = $result->fetch_assoc()) {
-            echo "inside while";
-            echo '<tr>  
-                    <td><img src = "Images/'.$row["books.bookPic"].'" width="200" height="200 "></td>
-                    <td><a href="bookInfo.php?bookInfo='.$row['book_id'].'" ?><b>'.$row["books.name"].'</b></td>
-                    <td>'.$row["books.author"].'</td> -->
-                </tr>';
-
-         }//end while
-    }//end if
-    else {
-        echo "0 results";
-    }//end else
-
-    $result->close();
-?>
+        <tr><!-- book_id = 1 -->
+            <th style="height: 175px;"><img style="width: 125px; height: 150px;" class="bookPic" src="Images/1.jpg" alt="Lord of the Rings: Fellowship of the Ring"></th>
+            <th>Lord of the Rings: Fellowship of the Ring</th>
+            <th>JRR Tolkien</th>
+        </tr>
+        <tr>  <!-- book_id = 2 -->
+            <th><img style="width: 125px; height: 150px;" class="bookPic" src="Images/2.jpg" alt="Lord of the Rings: The Two Towers"></th>
+            <th>Lord of the Rings: The Two Towers</th>
+            <th>JRR Tolkien</th>
+        </tr>
+        <tr>  <!-- book_id = 3 -->
+            <th><img style="width: 125px; height: 150px;" class="bookPic" src="Images/3.jpg" alt="Lord of the Rings: Return of the King"></th>
+            <th>Lord of the Rings: Return of the King</th>
+            <th>JRR Tolkien</th>
+        </tr>
+        <tr>  <!-- book_id = 4 -->
+            <th><img style="width: 125px; height: 150px;" class="bookPic" src="Images/4.jpg" alt="The Hobbit"></th>                        
+            <th>The Hobbit</th>
+            <th>JRR Tolkien</th>
+        </tr>
+        <tr>  <!-- book_id = 5 -->
+            <th><img style="width: 125px; height: 150px;" class="bookPic" src="Images/5.jpg" alt="The Holy Bible"></th>
+            <th>The Holy Bible</th>
+            <th>God and People</th>
+        </tr>
+        <tr>  <!-- book_id = 6 -->
+            <th><img style="width: 125px; height: 150px;" class="bookPic" src="Images/6.jpg" alt="Star Wars A New Hope"></th>
+            <th>Star Wars Episode IV: A New Hope</th>
+            <th>George Lucas</th>
+        </tr>
+        <tr>  <!-- book_id = 7 -->
+            <th><img style="width: 125px; height: 150px;" class="bookPic" src="Images/7.jpg" alt="Tom Clancey: Patriot's Game"></th>
+            <th>Tom Clancey: Patriot's Game</th>
+            <th>Tom Clancey</th>
+        </tr>
+        <tr>  <!-- book_id = 8 -->
+            <th><img style="width: 125px; height: 150px;" class="bookPic" src="Images/8.png" alt="Tom Clancey: The Hunt for the Red October"></th>
+            <th>Tom Clancey: The Hunt for the Red October</th>
+            <th>Tom Clancey</th>
+        </tr>
     </tbody>
-    <!-- FOOTER -->
     <tfoot>
         <tr>
             <th></th><!--This is for the image-->
             <th>Book Title</th>
-            <th>Rent Amount</th>
-            <th>Purchase Amount</th>
+            <th>Book Author</th>
         </tr>
     </tfoot>
 </table>
