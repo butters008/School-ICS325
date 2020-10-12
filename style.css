@@ -6,11 +6,11 @@ and did navigation and active myself*/
     color: white;
     float: left;
     width: 200px;
-    max-height: 200px;
+    max-height: 300px;
     overflow: hidden;
     background-color: #333;
     display: block;
-    margin-right: 75px;
+    margin-right: 25px;
 }
 
 ul {
@@ -53,9 +53,10 @@ li a:hover {
 /*-Table Listing and Books-----------*/
 table{
     margin-right: auto;
-    /* margin-left: 350px; */
-    /* margin-left: auto; */
-    border: solid;
+     margin-left: 350px;
+    margin-left: auto;
+    /* border: solid; */
+    text-align: center;
 
 }
 
@@ -72,13 +73,16 @@ tfoot {
 
 tbody{
     border: solid;
+    /* color: white; */
+    background-color: rgb(160, 160, 160);
 }
 
 th{
     padding: 15px;
-    border: solid;
-    min-width: 150px;
-    max-height: 250px;
+    /* border: solid; */
+    min-width: 250px;
+    max-height: 200px;
+    
 }
 
 #mainHeader{
@@ -90,12 +94,12 @@ th{
 .bookPic{
     width: 125px;
     height: 150px;
-    /* height: ; */
 }
 /*-----------------------------------*/
 /*-Overall Main Body-----------------*/
 body{
     background-color: rgb(43, 43, 43);
+    /* background-color: aqua; */
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -103,7 +107,7 @@ body{
     background-color: rgb(218, 218, 218);
     width: 75%;
     margin: auto;
-    min-height: auto; 
+    min-height: 500px; 
     padding: 25px;
 }
 
@@ -113,5 +117,20 @@ body{
     margin-left: auto;
     display: inline-block;
     vertical-align: top;
+}
+/*-----------------------------------*/
+
+/* This is for review ---------------*/
+#bookInfo{
+    float: right;
+    margin: auto;
+    width: 500px;
+    text-align: left;
+    margin-right: 80px;
+}
+.leaveReview{
+    margin: auto;
+    /* float: left; */
+    /* text-align: left; */
 }
 /*-----------------------------------*/
